@@ -15,7 +15,7 @@ URL:		http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
 BuildRequires:	cgilibc-devel
-BuildRequires:	php-devel >= 4:5.0
+BuildRequires:	php-devel >= 3:5.0.0
 BuildRequires:	rpmbuild(macros) >= 1.230
 BuildRequires:	rrdtool-devel
 BuildRequires:	gd-devel
