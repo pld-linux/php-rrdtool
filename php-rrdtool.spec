@@ -1,9 +1,3 @@
-# TODO
-# - doesn't work:
-# $ php -r 'print rrd_graph();'
-# PHP Warning:  PHP Startup: Invalid library (maybe not a PHP library) 'rrdtool.so'  in Unknown on line 0
-# PHP Warning:  PHP Startup: Invalid library (maybe not a PHP library) 'rrdtool.so'  in Unknown on line 0
-# PHP Fatal error:  Call to undefined function rrd_graph() in Command line code on line 1
 %define		_modname	rrdtool
 %define		_sysconfdir	/etc/php
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
@@ -11,16 +5,18 @@ Summary:	RRDtool PHP module
 Summary(pl):	Modu³ PHP RRDtool
 Name:		php-rrdtool
 Version:	1.0.50
-Release:	0.2
+Release:	1
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/rrdtool-1.0.x/rrdtool-%{version}.tar.gz
 # Source0-md5:	c466e2e7df95fa8e318e46437da87686
+Patch0:		rrdtool-php-config.patch
 URL:		http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
 BuildRequires:	cgilibc-devel
 BuildRequires:	php-devel >= 4:5.0
+BuildRequires:	rpmbuild(macros) >= 1.230
 BuildRequires:	rrdtool-devel
 BuildRequires:	gd-devel
 Requires(post,preun):	php-common
@@ -32,11 +28,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package includes a dynamic shared object (DSO) that adds RRDtool
 bindings to the PHP HTML-embedded scripting language.
 
-%description -n php-rrdtool -l pl
+%description -l pl
 Modu³ RRDtool dla PHP.
 
 %prep
 %setup -q -n rrdtool-%{version}
+%patch0 -p0
 
 %build
 cd contrib/php4
