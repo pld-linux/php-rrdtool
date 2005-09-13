@@ -28,7 +28,8 @@ This package includes a dynamic shared object (DSO) that adds RRDtool
 bindings to the PHP HTML-embedded scripting language.
 
 %description -l pl
-Modu³ RRDtool dla PHP.
+Ten pakiet zawiera dynamiczny modu³ (DSO) dodaj±cy dowi±zania RRDtoola
+do jêzyka skryptowego PHP.
 
 %prep
 %setup -q -n rrdtool-%{version}
