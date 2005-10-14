@@ -5,12 +5,13 @@ Summary:	RRDtool PHP module
 Summary(pl):	Modu³ PHP RRDtool
 Name:		php-rrdtool
 Version:	1.0.50
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/rrdtool-1.0.x/rrdtool-%{version}.tar.gz
 # Source0-md5:	c466e2e7df95fa8e318e46437da87686
 Patch0:		rrdtool-php-config.patch
+Patch1:		%{name}-new.patch
 URL:		http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/
 BuildRequires:	cgilibc-devel
 BuildRequires:	gd-devel
@@ -33,6 +34,7 @@ do jêzyka skryptowego PHP.
 %prep
 %setup -q -n rrdtool-%{version}
 %patch0 -p0
+%patch1 -p1
 
 %build
 cd contrib/php4
