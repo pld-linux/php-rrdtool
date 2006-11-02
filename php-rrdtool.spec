@@ -12,7 +12,7 @@ Source0:	http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/contrib/php_rrdt
 # Source0-md5:	c86a45cfc54517b9066c480bbc589d43
 URL:		http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/
 BuildRequires:	php-devel >= 3:5.0.0
-BuildRequires:	rpmbuild(macros) >= 1.238
+BuildRequires:	rpmbuild(macros) >= 1.322
 BuildRequires:	rrdtool-devel >= 1.2.10
 BuildRequires:	sed >= 4.0
 %{?requires_php_extension}
