@@ -1,6 +1,6 @@
 %define		_modname	rrdtool
 Summary:	RRDtool PHP module
-Summary(pl):	Modu³ PHP RRDtool
+Summary(pl.UTF-8):   ModuÅ‚ PHP RRDtool
 Name:		php-rrdtool
 Version:	1.2
 Release:	2
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package includes a dynamic shared object (DSO) that adds RRDtool
 bindings to the PHP HTML-embedded scripting language.
 
-%description -l pl
-Ten pakiet zawiera dynamiczny modu³ (DSO) dodaj±cy dowi±zania RRDtoola
-do jêzyka skryptowego PHP.
+%description -l pl.UTF-8
+Ten pakiet zawiera dynamiczny moduÅ‚ (DSO) dodajÄ…cy dowiÄ…zania RRDtoola
+do jÄ™zyka skryptowego PHP.
 
 %prep
 %setup -q -n rrdtool
