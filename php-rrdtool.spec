@@ -1,6 +1,6 @@
 %define		_modname	rrdtool
 Summary:	RRDtool PHP module
-Summary(pl.UTF-8):   Moduł PHP RRDtool
+Summary(pl.UTF-8):	Moduł PHP RRDtool
 Name:		php-rrdtool
 Version:	1.2
 Release:	2
