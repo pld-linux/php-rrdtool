@@ -1,14 +1,14 @@
-%define		_modname	rrdtool
+%define		modname	rrdtool
 Summary:	RRDtool PHP module
 Summary(pl.UTF-8):	Moduł PHP RRDtool
 Name:		php-rrdtool
 Version:	1.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/contrib/php_rrdtool.tgz
 # Source0-md5:	c86a45cfc54517b9066c480bbc589d43
-URL:		http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/
+URL:		http://oss.oetiker.ch/rrdtool/
 BuildRequires:	php-devel >= 3:5.0.0
 BuildRequires:	rpmbuild(macros) >= 1.322
 BuildRequires:	rrdtool-devel >= 1.2.10
@@ -44,9 +44,9 @@ install -d $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d
 %{__make} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
 
-cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
-; Enable %{_modname} extension module
-extension=%{_modname}.so
+cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
+; Enable %{modname} extension module
+extension=%{modname}.so
 EOF
 
 %clean
@@ -62,5 +62,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{_modname}.ini
-%attr(755,root,root) %{php_extensiondir}/%{_modname}.so
+%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{modname}.ini
+%attr(755,root,root) %{php_extensiondir}/%{modname}.so
