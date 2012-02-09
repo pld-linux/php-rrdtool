@@ -3,7 +3,7 @@ Summary:	RRDtool PHP module
 Summary(pl):	Modu³ PHP RRDtool
 Name:		php-rrdtool
 Version:	1.0.50
-Release:	8
+Release:	9
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/rrdtool-1.0.x/rrdtool-%{version}.tar.gz
