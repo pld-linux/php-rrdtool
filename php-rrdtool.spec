@@ -1,20 +1,20 @@
+%define		php_name	php%{?php_suffix}
 %define		modname	rrdtool
 Summary:	RRDtool PHP module
 Summary(pl.UTF-8):	Moduł PHP RRDtool
-Name:		php-rrdtool
+Name:		%{php_name}-%{modname}
 Version:	1.2
-Release:	7
+Release:	8
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/contrib/php_rrdtool.tgz
 # Source0-md5:	c86a45cfc54517b9066c480bbc589d43
 URL:		http://oss.oetiker.ch/rrdtool/
-BuildRequires:	php-devel >= 3:5.0.0
+BuildRequires:	%{php_name}-devel >= 3:5.0.4
 BuildRequires:	rpmbuild(macros) >= 1.322
 BuildRequires:	rrdtool-devel >= 1.2.10
 BuildRequires:	sed >= 4.0
 %{?requires_php_extension}
-Requires:	php(core) >= 5.0.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,7 +40,6 @@ phpize
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d
-
 %{__make} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
 
