@@ -1,3 +1,5 @@
+# NOTE
+# - use http://pecl.php.net/package/rrd instead
 %define		php_name	php%{?php_suffix}
 %define		modname	rrdtool
 Summary:	RRDtool PHP module
